@@ -85,7 +85,7 @@ From the DebeziumCDC.zip folder, create a Docker image called debeziummodule16. 
 
 `docker build -t debeziummodule16 .`
 
-Create the Docker container for Debezium and make sure you associate it with the MBTANetwork network. Provide a screenshot to show that you have successfully created the Docker container and associated it with the MBTANetwork network.
+Create the Docker container for Debezium and make sure you associate it with the MBTANetwork network. Provide a screenshot to show that you have successfully created the Docker container and associated it with the MBTANetwork network. (Have to run this step after making a change to the mysql container for some reason)
 
 `docker run -it --name debeziumserver --network MBTANetwork debeziummodule16 bash`
 
