@@ -1,3 +1,5 @@
+server.py fetches bus data from mbta every 10 seconds and inserts it into the mysql container > index.html fetches bus data from server.py every 15 seconds > when bus data is inserted into mysql, debezium container inserts it into mongodb container > maven container reads bus data from mongodb container
+
 In Video 16.1, Dr. Sanchez demonstrated how to create a prototype of a web application that uses Mapbox to display the positions of buses along Route 1 for the MBTA. The longitude and latitude for the buses are hardcoded for the prototype and are incremented periodically to simulate movement.
 
 Before working through the steps of this project, be sure to review the Submission Instructions and Project 16.1 Rubric to ensure that you collect all required screenshots as you work through the project.
@@ -20,6 +22,10 @@ To complete this project, follow these steps:
 Your project should utilize Docker containers running on the same Docker network. Your project should contain the following components:
 
 Create a Docker network called MBTANetwork. Associate all Docker containers to this network. Provide a screenshot to show that you have successfully created the MBTANetwork network.
+
+`docker network create MBTANetwork`
+
+
 Unzip and open the mysqlDocker folder. Provide a screenshot to show that you have successfully opened the mysqlDocker folder.
 Using VS Code, open the MBTA.sql file. Provide a screenshot to show that you have successfully opened the MBTA.sql file.
 In a Jupyter Notebook, run the following code:
@@ -52,9 +58,17 @@ Here are some additional links for you to familiarize yourself with the MBTA API
 About the V3 MBTA APILinks to an external site.
 MBTA SwaggerLinks to an external site.
 After modifying the MBTA.sql file and adding the additional fields you have selected, navigate from a shell prompt to the folder where you have the Dockerfile stored and run the Docker command to create a Docker image called mysqlmbtamasterimg. Provide a screenshot to show that you have successfully created the mysqlmbtamasterimg Docker image.
+
+`docker build -t mysqlmbtamasterimg .`
 Create a Docker container associated with the MBTANetwork network that you created in Step 1. Name the Docker container mysqlserver. Provide a screenshot to show that you have successfully created the mysqlserver Docker container.
+
+`docker run --rm --name mysqlserver -p 3307:3306 --network MBTANetwork -d mysqlmbtamasterimg`
+
 MongoDB Docker container:
 Create a MongoDB Docker container to be used for CDC. Be sure that the MongoDB container is part of the same network (MBTANetwork) as the other containers in your project. Name the container some-mongo. Provide a screenshot to show that you have successfully created the some-mongo Docker container.
+
+`docker run -p 27017:27017 --network MBTANetwork --name some-mongo -d mongo`
+
 Flask web server (Note: This will be running on your local machine.)
 Unzip the Module16ProjectFlask.zip folder on your local machine and open it using VS Code. Provide a screenshot to show that you have successfully opened the Module16ProjectFlask.zip folder in VS Code.
 Modify the code in the mysqldb.py file to add all the columns that you defined in the mbta_buses SQL table following the template provided in the mysqldb.py file. Provide a screenshot to show that you have successfully modified the mysqldb.py file.
@@ -66,8 +80,19 @@ Open a browser window and navigate to localhost:3000. Provide a screenshot to sh
 Debezium CDC monitor container:
 Unzip the DebeziumCDC.zip folder on your local machine and open it using VS Code. Provide a screenshot to show that you have successfully opened the DebeziumCDC.zip folder in VS Code.
 From the DebeziumCDC.zip folder, create a Docker image called debeziummodule16. Provide a screenshot to show that you have successfully created the debeziummodule16 Docker image.
+
+`docker build -t debeziummodule16 .`
+
 Create the Docker container for Debezium and make sure you associate it with the MBTANetwork network. Provide a screenshot to show that you have successfully created the Docker container and associated it with the MBTANetwork network.
+
+`docker run -it --rm --name debeziumserver --network MBTANetwork debeziummodule16 bash`
+
 Once the Debezium container is running, open a shell (from <CLI> in the Debezium Docker container) and go through the steps of installing the nano text editor. Provide a screenshot to show that you have successfully installed the nano text editor in your shell.
+
+`apt-get update`
+
+`apt-get install nano`
+
 From the Debezium shell, navigate to the following file:
 /tmp/src/main/java/mit/edu/tv/listener/MongoDB.java
 
@@ -93,11 +118,24 @@ sourceRecord.value().toString()
 
 Provide a screenshot to show that you have successfully modified the handleChangeEvent method.  
 From the Debezium shell prompt, run the Maven SpringBoot application using the following command:
-mvn spring-boot:run
+`mvn spring-boot:run`
 
 Provide a screenshot to show that you have successfully run the Maven SpringBoot application.
-Verify that the MongoDB database is being populated:
+
+`docker run --name javamaven --network MBTANetwork  -dti --rm -p 8080:8080 maven:3.6.3-openjdk-11 bash`
+
+`git clone https://github.com/mongodb-developer/java-quick-start`
+
+have to modify the pom.xml to make it version 11 instead of 21, and some of the files to not use triple quotes, then
+`docker cp java-quick-start javamaven:/`
+
+Verify that the MongoDB database is being populated: https://classroom.emeritus.org/courses/8898/pages/mini-lesson-16-dot-4-performing-crud-operations-on-a-mongodb-database-using-java-30-00?module_item_id=1487146
 Following the steps in Mini-Lesson 16.4, create a container called javamaven to query the MongoDB database. Follow the steps to download the Java MongoDB classes and copy the files to the container. Provide a screenshot of your Docker desktop to show the javamaven container running.
+
+`mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.HelloMongoDB"` just to test if it compiles
+
+`mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.Connection" -Dmongodb.uri="mongodb://some-mongo:27017"`
+
 After you have installed the nano text editor, navigate to the following folder from the javamaven container bash prompt:
 /java-quick-start/src/main/java/com/mongodb/quickstart
 
@@ -140,7 +178,7 @@ Provide a screenshot to show that you successfully created the ReadCDC.java file
 From the bash command prompt, make sure you are in the /java-quick-start folder and run the following command to execute the ReadCDC.java class:
  
 
-mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.ReadCDC" -Dmongodb.uri="mongodb://some-mongo:27017"
+`mvn compile exec:java -Dexec.mainClass="com.mongodb.quickstart.ReadCDC" -Dmongodb.uri="mongodb://some-mongo:27017"`
 
 Provide a screenshot to show the results of the bash command to execute the ReadCDC.java class.
 
