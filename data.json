@@ -2,145 +2,169 @@
 	"data": [
 		{
 			"attributes": {
-				"bearing": 135,
+				"bearing": 159,
 				"carriages": [],
 				"current_status": "STOPPED_AT",
-				"current_stop_sequence": 9,
+				"current_stop_sequence": 12,
 				"direction_id": 1,
-				"label": "1895",
-				"latitude": 42.36054,
-				"longitude": -71.09557,
-				"occupancy_status": "MANY_SEATS_AVAILABLE",
+				"label": "3286",
+				"latitude": 42.3471398,
+				"longitude": -71.08777466,
+				"occupancy_status": "FEW_SEATS_AVAILABLE",
 				"revenue": "REVENUE",
 				"speed": null,
-				"updated_at": "2024-07-24T22:10:11-04:00"
+				"updated_at": "2024-07-25T12:39:07-04:00"
 			},
-			"id": "y1895",
-			"links": { "self": "/vehicles/y1895" },
+			"id": "y3286",
+			"links": { "self": "/vehicles/y3286" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "74", "type": "stop" } },
-				"trip": { "data": { "id": "63071685", "type": "trip" } }
+				"stop": { "data": { "id": "79", "type": "stop" } },
+				"trip": { "data": { "id": "63071637", "type": "trip" } }
 			},
 			"type": "vehicle"
 		},
 		{
 			"attributes": {
-				"bearing": 135,
+				"bearing": 225,
 				"carriages": [],
-				"current_status": "IN_TRANSIT_TO",
-				"current_stop_sequence": 13,
+				"current_status": "STOPPED_AT",
+				"current_stop_sequence": 22,
 				"direction_id": 1,
-				"label": "1894",
-				"latitude": 42.34704,
-				"longitude": -71.08774,
-				"occupancy_status": "MANY_SEATS_AVAILABLE",
+				"label": "3264",
+				"latitude": 42.33216,
+				"longitude": -71.08157,
+				"occupancy_status": "FEW_SEATS_AVAILABLE",
 				"revenue": "REVENUE",
 				"speed": null,
-				"updated_at": "2024-07-24T22:10:12-04:00"
+				"updated_at": "2024-07-25T12:39:05-04:00"
 			},
-			"id": "y1894",
-			"links": { "self": "/vehicles/y1894" },
+			"id": "y3264",
+			"links": { "self": "/vehicles/y3264" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "80", "type": "stop" } },
-				"trip": { "data": { "id": "63071684", "type": "trip" } }
+				"stop": { "data": { "id": "62", "type": "stop" } },
+				"trip": { "data": { "id": "63075563", "type": "trip" } }
 			},
 			"type": "vehicle"
 		},
 		{
 			"attributes": {
-				"bearing": 0,
+				"bearing": 313,
 				"carriages": [],
 				"current_status": "STOPPED_AT",
-				"current_stop_sequence": 15,
+				"current_stop_sequence": 17,
 				"direction_id": 0,
-				"label": "1830",
-				"latitude": 42.35950604,
-				"longitude": -71.09377134,
-				"occupancy_status": "MANY_SEATS_AVAILABLE",
+				"label": "3263",
+				"latitude": 42.36281624,
+				"longitude": -71.09927202,
+				"occupancy_status": "FEW_SEATS_AVAILABLE",
 				"revenue": "REVENUE",
 				"speed": null,
-				"updated_at": "2024-07-24T22:10:11-04:00"
+				"updated_at": "2024-07-25T12:39:08-04:00"
 			},
-			"id": "y1830",
-			"links": { "self": "/vehicles/y1830" },
+			"id": "y3263",
+			"links": { "self": "/vehicles/y3263" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "97", "type": "stop" } },
-				"trip": { "data": { "id": "63071323", "type": "trip" } }
+				"stop": { "data": { "id": "101", "type": "stop" } },
+				"trip": { "data": { "id": "63075153", "type": "trip" } }
 			},
 			"type": "vehicle"
 		},
 		{
 			"attributes": {
-				"bearing": 0,
-				"carriages": [],
-				"current_status": "STOPPED_AT",
-				"current_stop_sequence": 15,
-				"direction_id": 1,
-				"label": "1771",
-				"latitude": 42.34151038,
-				"longitude": -71.083288699,
-				"occupancy_status": "MANY_SEATS_AVAILABLE",
-				"revenue": "REVENUE",
-				"speed": null,
-				"updated_at": "2024-07-24T22:10:15-04:00"
-			},
-			"id": "y1771",
-			"links": { "self": "/vehicles/y1771" },
-			"relationships": {
-				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "187", "type": "stop" } },
-				"trip": { "data": { "id": "63071683", "type": "trip" } }
-			},
-			"type": "vehicle"
-		},
-		{
-			"attributes": {
-				"bearing": 206,
+				"bearing": 308,
 				"carriages": [],
 				"current_status": "IN_TRANSIT_TO",
-				"current_stop_sequence": 2,
-				"direction_id": 1,
-				"label": "1765",
-				"latitude": 42.37237574,
-				"longitude": -71.11911204,
+				"current_stop_sequence": 17,
+				"direction_id": 0,
+				"label": "3237",
+				"latitude": 42.36164577,
+				"longitude": -71.09744084,
 				"occupancy_status": "MANY_SEATS_AVAILABLE",
 				"revenue": "REVENUE",
 				"speed": null,
-				"updated_at": "2024-07-24T22:10:15-04:00"
+				"updated_at": "2024-07-25T12:39:07-04:00"
 			},
-			"id": "y1765",
-			"links": { "self": "/vehicles/y1765" },
+			"id": "y3237",
+			"links": { "self": "/vehicles/y3237" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "66", "type": "stop" } },
-				"trip": { "data": { "id": "63071686", "type": "trip" } }
+				"stop": { "data": { "id": "101", "type": "stop" } },
+				"trip": { "data": { "id": "63075155", "type": "trip" } }
 			},
 			"type": "vehicle"
 		},
 		{
 			"attributes": {
-				"bearing": 315,
+				"bearing": 10,
 				"carriages": [],
 				"current_status": "STOPPED_AT",
-				"current_stop_sequence": 1,
+				"current_stop_sequence": 17,
+				"direction_id": 0,
+				"label": "3204",
+				"latitude": 42.362782959,
+				"longitude": -71.09941899,
+				"occupancy_status": "FEW_SEATS_AVAILABLE",
+				"revenue": "REVENUE",
+				"speed": null,
+				"updated_at": "2024-07-25T12:39:08-04:00"
+			},
+			"id": "y3204",
+			"links": { "self": "/vehicles/y3204" },
+			"relationships": {
+				"route": { "data": { "id": "1", "type": "route" } },
+				"stop": { "data": { "id": "101", "type": "stop" } },
+				"trip": { "data": { "id": "63075151", "type": "trip" } }
+			},
+			"type": "vehicle"
+		},
+		{
+			"attributes": {
+				"bearing": 164,
+				"carriages": [],
+				"current_status": "STOPPED_AT",
+				"current_stop_sequence": 12,
 				"direction_id": 1,
-				"label": "1764",
-				"latitude": 42.3658575,
-				"longitude": -71.1044463,
+				"label": "3202",
+				"latitude": 42.34690245,
+				"longitude": -71.08764827,
 				"occupancy_status": "MANY_SEATS_AVAILABLE",
 				"revenue": "REVENUE",
 				"speed": null,
-				"updated_at": "2024-07-24T22:10:12-04:00"
+				"updated_at": "2024-07-25T12:39:07-04:00"
 			},
-			"id": "y1764",
-			"links": { "self": "/vehicles/y1764" },
+			"id": "y3202",
+			"links": { "self": "/vehicles/y3202" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
-				"stop": { "data": { "id": "110", "type": "stop" } },
-				"trip": { "data": { "id": "63071688", "type": "trip" } }
+				"stop": { "data": { "id": "79", "type": "stop" } },
+				"trip": { "data": { "id": "63075561", "type": "trip" } }
+			},
+			"type": "vehicle"
+		},
+		{
+			"attributes": {
+				"bearing": 140,
+				"carriages": [],
+				"current_status": "IN_TRANSIT_TO",
+				"current_stop_sequence": 10,
+				"direction_id": 1,
+				"label": "1834",
+				"latitude": 42.35949263,
+				"longitude": -71.09403106,
+				"occupancy_status": "FEW_SEATS_AVAILABLE",
+				"revenue": "REVENUE",
+				"speed": null,
+				"updated_at": "2024-07-25T12:39:10-04:00"
+			},
+			"id": "y1834",
+			"links": { "self": "/vehicles/y1834" },
+			"relationships": {
+				"route": { "data": { "id": "1", "type": "route" } },
+				"stop": { "data": { "id": "75", "type": "stop" } },
+				"trip": { "data": { "id": "63075559", "type": "trip" } }
 			},
 			"type": "vehicle"
 		}
@@ -149,15 +173,42 @@
 		{
 			"attributes": {
 				"bikes_allowed": 1,
-				"block_id": "C553-376",
+				"block_id": "C01-3",
+				"direction_id": 1,
+				"headsign": "Nubian",
+				"name": "",
+				"revenue": "REVENUE",
+				"wheelchair_accessible": 1
+			},
+			"id": "63071637",
+			"links": { "self": "/trips/63071637" },
+			"relationships": {
+				"route": { "data": { "id": "1", "type": "route" } },
+				"route_pattern": {
+					"data": { "id": "1-_-1", "type": "route_pattern" }
+				},
+				"service": {
+					"data": {
+						"id": "BUS32024-hbc34ns1-Weekday-02",
+						"type": "service"
+					}
+				},
+				"shape": { "data": { "id": "010129", "type": "shape" } }
+			},
+			"type": "trip"
+		},
+		{
+			"attributes": {
+				"bikes_allowed": 1,
+				"block_id": "A01-6",
 				"direction_id": 0,
 				"headsign": "Harvard",
 				"name": "",
 				"revenue": "REVENUE",
 				"wheelchair_accessible": 1
 			},
-			"id": "63071323",
-			"links": { "self": "/trips/63071323" },
+			"id": "63075151",
+			"links": { "self": "/trips/63075151" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
 				"route_pattern": {
@@ -165,7 +216,7 @@
 				},
 				"service": {
 					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
+						"id": "BUS32024-hba34ns1-Weekday-02",
 						"type": "service"
 					}
 				},
@@ -176,15 +227,69 @@
 		{
 			"attributes": {
 				"bikes_allowed": 1,
-				"block_id": "C01-11",
+				"block_id": "A01-7",
+				"direction_id": 0,
+				"headsign": "Harvard",
+				"name": "",
+				"revenue": "REVENUE",
+				"wheelchair_accessible": 1
+			},
+			"id": "63075153",
+			"links": { "self": "/trips/63075153" },
+			"relationships": {
+				"route": { "data": { "id": "1", "type": "route" } },
+				"route_pattern": {
+					"data": { "id": "1-_-0", "type": "route_pattern" }
+				},
+				"service": {
+					"data": {
+						"id": "BUS32024-hba34ns1-Weekday-02",
+						"type": "service"
+					}
+				},
+				"shape": { "data": { "id": "010128", "type": "shape" } }
+			},
+			"type": "trip"
+		},
+		{
+			"attributes": {
+				"bikes_allowed": 1,
+				"block_id": "A01-8",
+				"direction_id": 0,
+				"headsign": "Harvard",
+				"name": "",
+				"revenue": "REVENUE",
+				"wheelchair_accessible": 1
+			},
+			"id": "63075155",
+			"links": { "self": "/trips/63075155" },
+			"relationships": {
+				"route": { "data": { "id": "1", "type": "route" } },
+				"route_pattern": {
+					"data": { "id": "1-_-0", "type": "route_pattern" }
+				},
+				"service": {
+					"data": {
+						"id": "BUS32024-hba34ns1-Weekday-02",
+						"type": "service"
+					}
+				},
+				"shape": { "data": { "id": "010128", "type": "shape" } }
+			},
+			"type": "trip"
+		},
+		{
+			"attributes": {
+				"bikes_allowed": 1,
+				"block_id": "A01-2",
 				"direction_id": 1,
 				"headsign": "Nubian",
 				"name": "",
 				"revenue": "REVENUE",
 				"wheelchair_accessible": 1
 			},
-			"id": "63071683",
-			"links": { "self": "/trips/63071683" },
+			"id": "63075559",
+			"links": { "self": "/trips/63075559" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
 				"route_pattern": {
@@ -192,7 +297,7 @@
 				},
 				"service": {
 					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
+						"id": "BUS32024-hba34ns1-Weekday-02",
 						"type": "service"
 					}
 				},
@@ -203,15 +308,15 @@
 		{
 			"attributes": {
 				"bikes_allowed": 1,
-				"block_id": "C01-12",
+				"block_id": "A01-5",
 				"direction_id": 1,
 				"headsign": "Nubian",
 				"name": "",
 				"revenue": "REVENUE",
 				"wheelchair_accessible": 1
 			},
-			"id": "63071684",
-			"links": { "self": "/trips/63071684" },
+			"id": "63075561",
+			"links": { "self": "/trips/63075561" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
 				"route_pattern": {
@@ -219,7 +324,7 @@
 				},
 				"service": {
 					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
+						"id": "BUS32024-hba34ns1-Weekday-02",
 						"type": "service"
 					}
 				},
@@ -230,15 +335,15 @@
 		{
 			"attributes": {
 				"bikes_allowed": 1,
-				"block_id": "C60-289",
+				"block_id": "A01-1",
 				"direction_id": 1,
 				"headsign": "Nubian",
 				"name": "",
 				"revenue": "REVENUE",
 				"wheelchair_accessible": 1
 			},
-			"id": "63071685",
-			"links": { "self": "/trips/63071685" },
+			"id": "63075563",
+			"links": { "self": "/trips/63075563" },
 			"relationships": {
 				"route": { "data": { "id": "1", "type": "route" } },
 				"route_pattern": {
@@ -246,61 +351,7 @@
 				},
 				"service": {
 					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
-						"type": "service"
-					}
-				},
-				"shape": { "data": { "id": "010129", "type": "shape" } }
-			},
-			"type": "trip"
-		},
-		{
-			"attributes": {
-				"bikes_allowed": 1,
-				"block_id": "C09-63",
-				"direction_id": 1,
-				"headsign": "Nubian",
-				"name": "",
-				"revenue": "REVENUE",
-				"wheelchair_accessible": 1
-			},
-			"id": "63071686",
-			"links": { "self": "/trips/63071686" },
-			"relationships": {
-				"route": { "data": { "id": "1", "type": "route" } },
-				"route_pattern": {
-					"data": { "id": "1-_-1", "type": "route_pattern" }
-				},
-				"service": {
-					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
-						"type": "service"
-					}
-				},
-				"shape": { "data": { "id": "010129", "type": "shape" } }
-			},
-			"type": "trip"
-		},
-		{
-			"attributes": {
-				"bikes_allowed": 1,
-				"block_id": "C01-13",
-				"direction_id": 1,
-				"headsign": "Nubian",
-				"name": "",
-				"revenue": "REVENUE",
-				"wheelchair_accessible": 1
-			},
-			"id": "63071688",
-			"links": { "self": "/trips/63071688" },
-			"relationships": {
-				"route": { "data": { "id": "1", "type": "route" } },
-				"route_pattern": {
-					"data": { "id": "1-_-1", "type": "route_pattern" }
-				},
-				"service": {
-					"data": {
-						"id": "BUS32024-hbc34ns1-Weekday-02",
+						"id": "BUS32024-hba34ns1-Weekday-02",
 						"type": "service"
 					}
 				},

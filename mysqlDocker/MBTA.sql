@@ -15,6 +15,6 @@ CREATE TABLE mbta_buses (
     headsign varchar(255) not null,
     bearing decimal(11,8) not null, -- 0 is North and 90 is East.
     current_stop_sequence INT not null,
-    updated_at TIMESTAMP not null
+    updated_at TIMESTAMP not null -- mbta api has a timezone of -04:00 so have to set the timezone in the mysql container. Then when using pandas pd.read_sql_query, manually set the update_at column with df['updated_at'].dt.tz_localize('UTC').dt.tz_convert('US/Eastern')
 );
 

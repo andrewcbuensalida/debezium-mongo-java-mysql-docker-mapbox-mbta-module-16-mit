@@ -1,4 +1,4 @@
-server.py fetches bus data from mbta every 10 seconds and inserts it into the mysql container > index.html fetches bus data from server.py every 15 seconds > when bus data is inserted into mysql, debezium container inserts it into mongodb container > maven container reads bus data from mongodb container
+server.py fetches bus data from mbta every 10 seconds and inserts it into the mysql container > index.html fetches bus data from server.py every 10 seconds > when bus data is inserted into mysql, debezium container inserts it into mongodb container > maven container reads bus data from mongodb container
 
 In Video 16.1, Dr. Sanchez demonstrated how to create a prototype of a web application that uses Mapbox to display the positions of buses along Route 1 for the MBTA. The longitude and latitude for the buses are hardcoded for the prototype and are incremented periodically to simulate movement.
 
