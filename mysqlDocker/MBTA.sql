@@ -13,6 +13,8 @@ CREATE TABLE mbta_buses (
     current_status varchar(255) not null,
     bikes_allowed INT, -- 0, 1, 2
     headsign varchar(255) not null,
-    bearing decimal(11,8) not null -- 0 is North and 90 is East.
+    bearing decimal(11,8) not null, -- 0 is North and 90 is East.
+    current_stop_sequence INT not null,
+    updated_at TIMESTAMP not null
 );
 

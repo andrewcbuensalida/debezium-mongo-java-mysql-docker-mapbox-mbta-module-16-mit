@@ -2,6 +2,7 @@ import urllib.request, json
 import mysqldb
 
 def callMBTAApi():
+    '''This function fetches bus data for route 1 from the MBTA api, selects certain fields and puts it in a list of dictionaries, saves it to the MySQL database, and returns the list of dictionaries'''
     mbtaDictList = []
     mbtaUrl = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip'
     with urllib.request.urlopen(mbtaUrl) as url:
@@ -20,6 +21,8 @@ def callMBTAApi():
                 busDict['bikes_allowed'] = trip['attributes']['bikes_allowed']
                 busDict['headsign'] = trip['attributes']['headsign']
             busDict['bearing'] = bus['attributes']['bearing']
+            busDict['current_stop_sequence'] = bus['attributes']['current_stop_sequence']
+            busDict['updated_at'] = bus['attributes']['updated_at']
             
             mbtaDictList.append(busDict)
     mysqldb.insertMBTARecord(mbtaDictList) 
