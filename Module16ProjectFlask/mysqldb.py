@@ -29,4 +29,4 @@ def insertMBTARecord(mbtaList):
         mycursor.execute(sql, val)
 
     mydb.commit()
-    print('Records inserted into mysql')
+    print(f'{len(mbtaList)} Records inserted into mysql')
