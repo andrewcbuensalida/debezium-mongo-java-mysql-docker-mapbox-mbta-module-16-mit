@@ -7,7 +7,7 @@ def callMBTAApi():
 
     mbtaUrl = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip'
     try:
-      with urllib.request.urlopen(mbtaUrl) as url:
+      with urllib.request.urlopen(mbtaUrl) as url: # TODO maybe could get the error here instead of wrapping in try/except
         data = json.loads(url.read().decode())
         print('''*********Example data: ''', data)
         trips = data['included'] if 'included' in data else []
